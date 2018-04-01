@@ -8,9 +8,12 @@ namespace Spotify.StructureMap
         {
          public StructureMapRegistry()
          {
-             For<ISearchService>()
-                 .Use<SearchMockService>();
+            For<ISearchService>()
+                .Use<SearchMockService>();
 
+             For<ISpotifyService>()
+                 .Use<SpotifyApiClient>();
+            
             //For<ISearchService>()
             //    .Use<SearchService>();
         }

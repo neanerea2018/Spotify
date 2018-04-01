@@ -17,3 +17,13 @@
         }    
     </ul>
 }
+
+@if (Model.Artist.Result.Artists.Items.Any())
+{
+    <ul>
+        @foreach (var item in Model.Artist.Result.Artists.Items)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+}
