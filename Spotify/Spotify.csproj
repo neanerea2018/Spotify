@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\Interfaces\ISearchService.cs" />
+    <Compile Include="Abstractions\SearchMockService.cs" />
     <Compile Include="Abstractions\SearchService.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />

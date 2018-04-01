@@ -9,7 +9,10 @@ namespace Spotify.StructureMap
          public StructureMapRegistry()
          {
              For<ISearchService>()
-                 .Use<SearchService>();      
-         }
+                 .Use<SearchMockService>();
+
+            //For<ISearchService>()
+            //    .Use<SearchService>();
+        }
     }
 }
