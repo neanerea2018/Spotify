@@ -1,0 +1,19 @@
+﻿@using Spotify.Models.ViewModels
+
+@model SearchViewModel
+
+@{
+    ViewBag.Title = "Sök";
+}
+
+<h1>SPOTIFY - SÖK</h1>
+
+@if (Model.SpotifyItems.Any())
+{
+    <ul>
+        @foreach (var item in Model.SpotifyItems)
+        {
+            <li>@item.Artist -  @item.Song</li>
+        }    
+    </ul>
+}
