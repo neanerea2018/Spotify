@@ -12,6 +12,8 @@ namespace Spotify.Abstractions.Interfaces
     {
         HttpClient GetDefaultClient();
 
+        Task<string> GetToken(SpotifyAuthClientCredentialsHttpMessageHandler authHandler);
+
         Task<SearchArtistResponse> SearchArtistsAsync(string artistName, int? limit = null, int? offset = null);
     }
 }

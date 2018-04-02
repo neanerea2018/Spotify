@@ -26,7 +26,17 @@ namespace Spotify.Abstractions
                 BaseAddress = new Uri(BaseUrl)
             };
 
+            var token = authHandler.GetAuthenticationTokenAsync();
+
+
             return client;
+        }
+
+        public Task<string> GetToken(SpotifyAuthClientCredentialsHttpMessageHandler authHandler)
+        {
+            var token = authHandler.GetAuthenticationTokenAsync();
+
+            return token;
         }
 
         public async Task<SearchArtistResponse> SearchArtistsAsync(string artistName, int? limit = null, int? offset = null)
